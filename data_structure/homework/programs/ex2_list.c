@@ -3,7 +3,7 @@
 #include "list.h"
 
 /*
-   Print List (versión para caracteres)
+   Print List (versiÃ³n para caracteres)
 */
 static void print_list(const List *list) {
     ListNode *node;
@@ -53,7 +53,7 @@ int main(int argc, char **argv) {
 
     print_list(&list);
 
-    // Eliminar el nodo después del 7º nodo
+    // Eliminar el nodo despuÃ©s del 7Âº nodo
     node = list_head(&list);
     for (i = 0; i < 7; ++i)
         node = list_next(node);
@@ -76,7 +76,7 @@ int main(int argc, char **argv) {
 
     print_list(&list);
 
-    // Eliminar nodo después del primero
+    // Eliminar nodo despuÃ©s del primero
     fprintf(stdout, "\nRemoving a node after the first node\n");
     if (list_rem_next(&list, list_head(&list), (void **)&data) != 0)
         return 1;
@@ -88,7 +88,7 @@ int main(int argc, char **argv) {
         return 1;
     print_list(&list);
 
-    // Insertar un nuevo carácter al inicio
+    // Insertar un nuevo carÃ¡cter al inicio
     fprintf(stdout, "\nInsert 'X' at the head of the list\n");
     if ((data = (char *)malloc(sizeof(char))) == NULL)
         return 1;
@@ -97,7 +97,7 @@ int main(int argc, char **argv) {
         return 1;
     print_list(&list);
 
-    // Probar macros de verificación
+    // Probar macros de verificaciÃ³n
     i = list_is_head(&list, list_head(&list));
     fprintf(stdout, "\nTesting list_is_head... value=%d (1=OK)\n", i);
     i = list_is_head(&list, list_tail(&list));
